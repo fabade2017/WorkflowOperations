@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e5e7eb;
+  background: #0f172a;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(135deg, #020617, #1e293b); color: #e2e8f0; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { min-height: 100vh; padding: 2rem; }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.eyebrow { margin: 0 0 0.2rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.78rem; color: #93c5fd; }
+h1, h2, p { margin-top: 0; }
+.launcher, .primary, .ghost {
+  border: none; border-radius: 999px; padding: 0.75rem 1rem; transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.launcher, .primary { background: linear-gradient(90deg, #2563eb, #7c3aed); color: white; }
+.ghost { background: rgba(255,255,255,0.12); color: #e2e8f0; }
+.launcher:hover, .primary:hover, .ghost:hover { transform: translateY(-1px); }
+.link-launcher {
+  color: #93c5fd; text-decoration: none; font-weight: 600; padding: 0.45rem 0.1rem;
+}
+.link-launcher:hover { text-decoration: underline; }
+.launcher-group { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+
+.card {
+  max-width: 720px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.14); border-radius: 1rem; background: rgba(15, 23, 42, 0.75); box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(2,6,23,0.72); display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+}
+.modal-card { width: min(640px, 100%); background: #111827; border: 1px solid rgba(255,255,255,0.14); border-radius: 1rem; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.progress { margin-bottom: 1rem; color: #93c5fd; font-weight: 700; }
+.form-grid { display: grid; gap: 0.9rem; }
+label { display: grid; gap: 0.35rem; font-size: 0.95rem; color: #cbd5e1; }
+input, select, textarea {
+  width: 100%; padding: 0.8rem 0.95rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.08); color: white;
+}
+textarea { resize: vertical; }
+.actions { display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.25rem; }
+.status-panel { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid rgba(255,255,255,0.14); color: #f8fafc; }
+.error { margin-top: 0.4rem; color: #fda4af; }
